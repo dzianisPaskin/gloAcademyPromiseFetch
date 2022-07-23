@@ -11,4 +11,6 @@ const sentData = (url, data) => {
   }).then(response => response.json())
 }
 
-sentData('https://jsonplaceholder.typicode.com/posts', JSON.stringify(getData)).then(data => console.log(data))
+sentData('https://jsonplaceholder.typicode.com/posts', JSON.stringify(getData))
+.then(data => console.log(data))
+.catch(e => console.log(`Error ${e}`))
